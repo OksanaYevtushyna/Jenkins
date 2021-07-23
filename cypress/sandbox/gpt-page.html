@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8"/>
+    <title>Test Page</title>
+
+    <script type='text/javascript'>
+        var gptadslots=[];
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        (function(){ var gads = document.createElement('script');
+            gads.async = true; gads.type = 'text/javascript';
+            var useSSL = 'https:' == document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+        })();
+    </script>
+    <script type="text/javascript">
+        googletag.cmd.push(function() {
+            gptadslots[0]= googletag.defineSlot('/74381231/Test/safeframe/off', [[300,250]],'ad-wrapper').addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.pubads().enableAsyncRendering();
+            googletag.enableServices();
+        });
+    </script>
+    <div id='ad-wrapper'>
+        <script type='text/javascript'>
+            googletag.cmd.push(function() {
+                googletag.display('ad-wrapper');
+                googletag.pubads().getSlots()[0].setTargeting("sovrn-reload", ["true"]);
+            });
+        </script>
+    </div>
+
+</head>
+<body>
+
+</body>
+</html>
